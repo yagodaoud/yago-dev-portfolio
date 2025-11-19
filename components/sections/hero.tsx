@@ -3,55 +3,102 @@
 import { useTranslations, useLocale } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, Download } from "lucide-react"
+import { Github, Linkedin, Mail, Download, Terminal, ArrowRight } from "lucide-react"
 
 export function Hero() {
     const t = useTranslations('Hero')
     const locale = useLocale()
     const cvHref = locale === 'pt' ? '/cv-pt.pdf' : '/cv-en.pdf'
 
+    // Typing animation variants
+    const typingContainer = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.05
+            }
+        }
+    }
+
+    const typingLetter = {
+        hidden: { opacity: 0, y: 10 },
+        show: { opacity: 1, y: 0 }
+    }
+
     return (
-        <section className="min-h-screen flex items-center justify-center pt-16">
-            <div className="container mx-auto px-4 flex flex-col items-center text-center gap-8">
+        <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+            {/* Decorative Code Snippet Background */}
+            <div className="absolute top-1/4 right-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none font-mono text-6xl font-bold rotate-12 transform translate-x-1/3">
+                {'<Code />'}
+            </div>
+
+            <div className="container mx-auto px-4 flex flex-col items-center text-center gap-8 z-10">
+
+                {/* Badge */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/20"
+                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/50 border border-border/50 backdrop-blur-sm text-sm font-medium text-muted-foreground"
                 >
-                    <div className="w-full h-full bg-gradient-to-br from-primary to-purple-600" />
+                    <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    Available for work
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    className="space-y-4"
-                >
-                    <h2 className="text-xl md:text-2xl font-medium text-muted-foreground">
-                        {t('role')}
-                    </h2>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
-                        Yago Andrade <span className="text-gradient">Daoud</span>
-                    </h1>
-                    <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed">
+                {/* Main Text */}
+                <div className="space-y-4">
+                    <motion.div
+                        initial="hidden"
+                        animate="show"
+                        variants={typingContainer}
+                        className="text-2xl md:text-3xl font-mono text-primary font-semibold"
+                    >
+                        {t('role').split("").map((char, index) => (
+                            <motion.span key={index} variants={typingLetter}>
+                                {char}
+                            </motion.span>
+                        ))}
+                    </motion.div>
+
+                    <motion.h1
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter"
+                    >
+                        Yago Andrade <br className="hidden md:block" />
+                        <span className="text-gradient drop-shadow-2xl">Daoud</span>
+                    </motion.h1>
+
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed"
+                    >
                         {t('description')}
-                    </p>
-                </motion.div>
+                    </motion.p>
+                </div>
 
+                {/* Buttons */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="flex flex-wrap items-center justify-center gap-4"
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    className="flex flex-col md:flex-row items-center gap-4 mt-4"
                 >
-                    <Button size="lg" className="gap-2" asChild>
+                    <Button size="lg" className="h-12 px-8 text-base gap-2 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20" asChild>
                         <a href="#contact">
                             <Mail className="w-4 h-4" />
                             {t('contactMe')}
+                            <ArrowRight className="w-4 h-4 ml-1 opacity-70" />
                         </a>
                     </Button>
-                    <Button size="lg" variant="outline" className="gap-2" asChild>
+                    <Button size="lg" variant="outline" className="h-12 px-8 text-base gap-2 border-border/50 hover:bg-secondary/50 hover:border-primary/50 transition-all" asChild>
                         <a href={cvHref} download>
                             <Download className="w-4 h-4" />
                             {t('downloadCv')}
@@ -59,18 +106,21 @@ export function Hero() {
                     </Button>
                 </motion.div>
 
+                {/* Socials */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="flex items-center gap-6 text-muted-foreground"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                    className="flex items-center gap-6 mt-8 text-muted-foreground"
                 >
-                    <a href="https://github.com/yagodaoud" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    <a href="https://github.com/yagodaoud" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:scale-110 transition-all">
                         <Github className="w-6 h-6" />
                     </a>
-                    <a href="https://www.linkedin.com/in/yago-andrade-dev?locale=en_US" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    <a href="https://www.linkedin.com/in/yago-andrade-dev?locale=en_US" target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:scale-110 transition-all">
                         <Linkedin className="w-6 h-6" />
                     </a>
+                    <div className="w-px h-6 bg-border/50" />
+                    <Terminal className="w-6 h-6 opacity-50" />
                 </motion.div>
             </div>
         </section>

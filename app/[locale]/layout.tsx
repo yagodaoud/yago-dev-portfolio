@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from "@/components/theme-provider";
+import { SpotlightBackground } from "@/components/ui/spotlight-bg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,15 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Yago Andrade Daoud | Backend Developer",
   description: "Backend Developer portfolio of Yago Andrade Daoud. Java, Spring Boot, Node.js, RabbitMQ.",
-  openGraph: {
-    title: "Yago Andrade Daoud | Backend Developer",
-    description: "Backend Developer portfolio of Yago Andrade Daoud. Java, Spring Boot, Node.js, RabbitMQ.",
-    url: "https://yagodaoud.dev",
-    siteName: "Yago Andrade Daoud",
-    locale: "en_US",
-    type: "website",
-  },
-  keywords: ["Backend Developer", "Java", "Spring Boot", "Node.js", "RabbitMQ", "Yago Andrade Daoud"],
+  // ... other metadata
 };
 
 export default async function RootLayout({
@@ -52,11 +45,12 @@ export default async function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="dark" // Default to dark for the "outstanding" vibe
           enableSystem={false}
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+            <SpotlightBackground /> {/* Add background here */}
             {children}
           </NextIntlClientProvider>
         </ThemeProvider>
