@@ -3,7 +3,8 @@
         "role": "Backend Developer",
         "description": "Backend Developer apaixonado por sistemas escaláveis e código limpo. Transformo problemas complexos em soluções robustas com Java Spring, Node.js e RabbitMQ. Java enthusiast, problem-solving passionate and full-time learner.",
         "downloadCv": "Baixar CV",
-        "contactMe": "Entre em contato"
+        "contactMe": "Entre em contato",
+        "availableForWork": "Disponível para trabalho"
     },
     "About": {
         "title": "Sobre Mim",

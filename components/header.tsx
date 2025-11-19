@@ -73,7 +73,7 @@ export function Header() {
                             variant="ghost"
                             size="sm"
                             onClick={toggleLanguage}
-                            className="font-mono text-xs border border-border/50 h-9"
+                            className="font-mono text-xs border border-border/50 h-9 cursor-pointer"
                         >
                             <Languages className="w-3 h-3 mr-2" />
                             {locale.toUpperCase()}
