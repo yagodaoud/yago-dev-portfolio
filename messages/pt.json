@@ -1,14 +1,14 @@
 {
     "Hero": {
         "role": "Backend Developer",
-        "description": "Backend Developer apaixonado por sistemas escaláveis e código limpo. Transformo problemas complexos em soluções robustas com Java Spring, Node.js e RabbitMQ. Java enthusiast, problem-solving passionate and full-time learner.",
+        "description": "Desenvolvedor backend apaixonado por sistemas escaláveis e código limpo. Transformo problemas complexos em soluções robustas com qualquer linguagem e framework.",
         "downloadCv": "Baixar CV",
         "contactMe": "Entre em contato",
         "availableForWork": "Disponível para trabalho"
     },
     "About": {
         "title": "Sobre Mim",
-        "content": "Sou um Backend Developer apaixonado por sistemas escaláveis e código limpo. Transformo problemas complexos em soluções robustas com Java Spring, Node.js e RabbitMQ."
+        "content": "Sou desenvolvedor backend com foco em soluções que funcionam e duram. Trabalho principalmente com Java + Spring Boot e Node.js + TypeScript/NestJS, mas já entreguei em PHP/Laravel, C#/.NET e até React/React Native quando o projeto pede. Gosto de resolver problemas reais: menos teoria, mais entrega. Se precisa de alguém que entende o negócio, escreve código que não vira legado amanhã e entrega no prazo, podemos conversar."
     },
     "Experience": {
         "title": "Experiência",
@@ -40,9 +40,9 @@
                     "MySQL"
                 ],
                 "description": [
-                    "Criou microservices críticos (proxy interno, integração Mercado Livre, webhook de pedidos com RabbitMQ) → eliminou 100% das consultas manuais",
-                    "Desenvolveu sistema full-stack de gestão de funcionários (Java + Spring + Thymeleaf + HTMX) → automatizou RH e financeiro",
-                    "Implantou CI/CD completo, separação de ambientes e rotinas de release → reduziu drasticamente tempo de deploy e erros em produção"
+                    "Criei microsserviços críticos (proxy interno, integração Mercado Livre, webhook de pedidos com RabbitMQ) → eliminei 100% das consultas manuais",
+                    "Desenvolvi sistema full-stack de gestão de funcionários (Java + Spring + Thymeleaf + HTMX) → automatizei RH e financeiro",
+                    "Implantei CI/CD completo, separação de ambientes e rotinas de release → reduzi drasticamente tempo de deploy e erros em produção"
                 ]
             },
             {
@@ -56,8 +56,8 @@
                     "AWS Lambda"
                 ],
                 "description": [
-                    "Desenvolveu features para +2000 lojas",
-                    "Implementou automações serverless com AWS Lambda → reduziu servidores dedicados"
+                    "Desenvolvi features para +2000 lojas",
+                    "Implementei automações serverless com AWS Lambda → reduzi servidores dedicados"
                 ]
             }
         ]

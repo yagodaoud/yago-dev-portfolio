@@ -20,7 +20,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Yago Andrade Daoud | Backend Developer",
   description: "Backend Developer portfolio of Yago Andrade Daoud. Java, Spring Boot, Node.js, RabbitMQ.",
-  // ... other metadata
 };
 
 export default async function RootLayout({

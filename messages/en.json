@@ -1,14 +1,14 @@
 {
   "Hero": {
     "role": "Backend Developer",
-    "description": "Backend Engineer focused on scalable systems and clean architecture. I turn complex problems into reliable solutions using Java Spring, Node.js and RabbitMQ. Java enthusiast, problem-solving passionate and full-time learner.",
+    "description": "Backend developer passionate about scalable systems and clean code. I turn complex problems into robust solutions using any language or framework.",
     "downloadCv": "Download CV",
     "contactMe": "Contact Me",
     "availableForWork": "Available for work"
   },
   "About": {
     "title": "About Me",
-    "content": "I am a Backend Developer passionate about scalable systems and clean code. I transform complex problems into robust solutions with Java Spring, Node.js, and RabbitMQ."
+    "content": "I'm a backend developer focused on solutions that work and last. I mainly work with Java + Spring Boot and Node.js + TypeScript/NestJS, but I’ve delivered production code with PHP/Laravel, C#/.NET and even React/React Native when the project needs it. I like solving real problems: less theory, more working software. If you need someone who understands the business, writes code that won’t become legacy tomorrow, and delivers on time, let’s talk."
   },
   "Experience": {
     "title": "Experience",

@@ -70,8 +70,7 @@ export function Hero() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter"
                     >
-                        Yago Andrade <br className="hidden md:block" />
-                        <span className="text-gradient drop-shadow-2xl">Daoud</span>
+                        Yago Andrade<br className="hidden md:block" />
                     </motion.h1>
 
                     <motion.p
