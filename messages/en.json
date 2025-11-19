@@ -1,0 +1,125 @@
+{
+  "Hero": {
+    "role": "Backend Developer",
+    "description": "Backend Engineer focused on scalable systems and clean architecture. I turn complex problems into reliable solutions using Java Spring, Node.js and RabbitMQ. Java enthusiast, problem-solving passionate and full-time learner.",
+    "downloadCv": "Download CV",
+    "contactMe": "Contact Me"
+  },
+  "About": {
+    "title": "About Me",
+    "content": "I am a Backend Developer passionate about scalable systems and clean code. I transform complex problems into robust solutions with Java Spring, Node.js, and RabbitMQ."
+  },
+  "Experience": {
+    "title": "Experience",
+    "jobs": [
+      {
+        "company": "Marlabs Brasil",
+        "role": "Mid-Level Backend Developer",
+        "period": "May 2025 – Present",
+        "tech": [
+          "Java",
+          "C#",
+          ".NET",
+          "SQL Server",
+          "Azure"
+        ],
+        "description": []
+      },
+      {
+        "company": "Deltatec - Assistência Técnica",
+        "role": "Junior Backend Developer",
+        "period": "Jul 2024 – May 2025",
+        "tech": [
+          "Node.js",
+          "TypeScript",
+          "Nest.js",
+          "Java",
+          "Spring Boot",
+          "RabbitMQ",
+          "MySQL"
+        ],
+        "description": [
+          "Created critical microservices (internal proxy, Mercado Livre integration, order webhook with RabbitMQ) → eliminated 100% of manual queries",
+          "Developed full-stack employee management system (Java + Spring + Thymeleaf + HTMX) → automated HR and finance",
+          "Implemented complete CI/CD, environment separation and release routines → drastically reduced deploy time and production errors"
+        ]
+      },
+      {
+        "company": "Irroba Plataforma de E-Commerce",
+        "role": "Backend Developer Intern",
+        "period": "Aug 2023 – Jun 2024",
+        "tech": [
+          "PHP",
+          "Laravel",
+          "MySQL",
+          "AWS Lambda"
+        ],
+        "description": [
+          "Developed features for +2000 stores",
+          "Implemented serverless automations with AWS Lambda → reduced dedicated servers"
+        ]
+      }
+    ]
+  },
+  "Projects": {
+    "title": "Featured Projects",
+    "viewProject": "View Project",
+    "items": [
+      {
+        "title": "VenceJá",
+        "description": "Complete boleto management system with OCR.",
+        "tech": [
+          "React",
+          "React Native",
+          "Java Spring Boot",
+          "PostgreSQL",
+          "Firebase"
+        ],
+        "metrics": "OCR with Google Vision, expiration alerts, financial reports"
+      },
+      {
+        "title": "Comandaê",
+        "description": "Mobile app for restaurants.",
+        "tech": [
+          "React Native",
+          "Convex",
+          "Clerk"
+        ],
+        "metrics": "Order management, inventory, real-time reports"
+      },
+      {
+        "title": "Paola Gonçalves Rotisserie",
+        "description": "Complete financial system.",
+        "tech": [
+          "React",
+          "Supabase"
+        ],
+        "metrics": "Accounts payable/receivable, customer management"
+      },
+      {
+        "title": "Fulfillment System + Mercado Livre",
+        "description": "Internal proxy and order webhook.",
+        "tech": [
+          "Node.js",
+          "Nest.js",
+          "RabbitMQ",
+          "MySQL"
+        ],
+        "metrics": "Eliminated 100% of manual queries"
+      }
+    ]
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message"
+  },
+  "Nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}

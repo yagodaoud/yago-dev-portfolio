@@ -1,0 +1,125 @@
+{
+    "Hero": {
+        "role": "Backend Developer",
+        "description": "Backend Developer apaixonado por sistemas escaláveis e código limpo. Transformo problemas complexos em soluções robustas com Java Spring, Node.js e RabbitMQ. Java enthusiast, problem-solving passionate and full-time learner.",
+        "downloadCv": "Baixar CV",
+        "contactMe": "Entre em contato"
+    },
+    "About": {
+        "title": "Sobre Mim",
+        "content": "Sou um Backend Developer apaixonado por sistemas escaláveis e código limpo. Transformo problemas complexos em soluções robustas com Java Spring, Node.js e RabbitMQ."
+    },
+    "Experience": {
+        "title": "Experiência",
+        "jobs": [
+            {
+                "company": "Marlabs Brasil",
+                "role": "Mid-Level Backend Developer",
+                "period": "Mai 2025 – Presente",
+                "tech": [
+                    "Java",
+                    "C#",
+                    ".NET",
+                    "SQL Server",
+                    "Azure"
+                ],
+                "description": []
+            },
+            {
+                "company": "Deltatec - Assistência Técnica",
+                "role": "Junior Backend Developer",
+                "period": "Jul 2024 – Mai 2025",
+                "tech": [
+                    "Node.js",
+                    "TypeScript",
+                    "Nest.js",
+                    "Java",
+                    "Spring Boot",
+                    "RabbitMQ",
+                    "MySQL"
+                ],
+                "description": [
+                    "Criou microservices críticos (proxy interno, integração Mercado Livre, webhook de pedidos com RabbitMQ) → eliminou 100% das consultas manuais",
+                    "Desenvolveu sistema full-stack de gestão de funcionários (Java + Spring + Thymeleaf + HTMX) → automatizou RH e financeiro",
+                    "Implantou CI/CD completo, separação de ambientes e rotinas de release → reduziu drasticamente tempo de deploy e erros em produção"
+                ]
+            },
+            {
+                "company": "Irroba Plataforma de E-Commerce",
+                "role": "Backend Developer Intern",
+                "period": "Ago 2023 – Jun 2024",
+                "tech": [
+                    "PHP",
+                    "Laravel",
+                    "MySQL",
+                    "AWS Lambda"
+                ],
+                "description": [
+                    "Desenvolveu features para +2000 lojas",
+                    "Implementou automações serverless com AWS Lambda → reduziu servidores dedicados"
+                ]
+            }
+        ]
+    },
+    "Projects": {
+        "title": "Projetos em Destaque",
+        "viewProject": "Ver Projeto",
+        "items": [
+            {
+                "title": "VenceJá",
+                "description": "Sistema completo de gestão de boletos com OCR.",
+                "tech": [
+                    "React",
+                    "React Native",
+                    "Java Spring Boot",
+                    "PostgreSQL",
+                    "Firebase"
+                ],
+                "metrics": "OCR com Google Vision, alertas de vencimento, relatórios financeiros"
+            },
+            {
+                "title": "Comandaê",
+                "description": "App mobile para restaurantes.",
+                "tech": [
+                    "React Native",
+                    "Convex",
+                    "Clerk"
+                ],
+                "metrics": "Gestão de comandas, estoque, relatórios em tempo real"
+            },
+            {
+                "title": "Paola Gonçalves Rotisserie",
+                "description": "Sistema financeiro completo.",
+                "tech": [
+                    "React",
+                    "Supabase"
+                ],
+                "metrics": "Contas a pagar/receber, gestão de clientes e produtos"
+            },
+            {
+                "title": "Sistema de Fulfillment + Mercado Livre",
+                "description": "Proxy interno e webhook de pedidos.",
+                "tech": [
+                    "Node.js",
+                    "Nest.js",
+                    "RabbitMQ",
+                    "MySQL"
+                ],
+                "metrics": "Eliminou 100% das consultas manuais"
+            }
+        ]
+    },
+    "Contact": {
+        "title": "Entre em Contato",
+        "name": "Nome",
+        "email": "Email",
+        "message": "Mensagem",
+        "send": "Enviar Mensagem"
+    },
+    "Nav": {
+        "about": "Sobre",
+        "experience": "Experiência",
+        "projects": "Projetos",
+        "contact": "Contato"
+    }
+}
