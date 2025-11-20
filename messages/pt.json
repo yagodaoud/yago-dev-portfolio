@@ -64,7 +64,7 @@
     },
     "Projects": {
         "title": "Projetos em Destaque",
-        "description": "Uma seleção de projetos que demonstram minha paixão por construir soluções escaláveis e centradas no usuário.",
+        "subtitle": "Uma seleção de projetos que demonstram minha paixão por construir soluções escaláveis e centradas no usuário.",
         "viewProject": "Ver Projeto",
         "projectBadge": "Projeto",
         "technologies": "Tecnologias",

@@ -8,7 +8,7 @@
   },
   "About": {
     "title": "About Me",
-    "content": "I'm a backend developer focused on solutions that work and last. I mainly work with Java + Spring Boot and Node.js + TypeScript/NestJS, but I’ve delivered production code with PHP/Laravel, C#/.NET and even React/React Native when the project needs it. I like solving real problems: less theory, more working software. If you need someone who understands the business, writes code that won’t become legacy tomorrow, and delivers on time, let’s talk."
+    "content": "I'm a backend developer focused on solutions that work and last. I mainly work with Java + Spring Boot and Node.js + TypeScript/NestJS, but I've delivered production code with PHP/Laravel, C#/.NET and even React/React Native when the project needs it. I like solving real problems: less theory, more working software. If you need someone who understands the business, writes code that won't become legacy tomorrow, and delivers on time, let's talk."
   },
   "Experience": {
     "title": "Experience",
@@ -64,7 +64,7 @@
   },
   "Projects": {
     "title": "Featured Projects",
-    "description": "A selection of projects that demonstrate my passion for building scalable, user-centric solutions.",
+    "subtitle": "A selection of projects that demonstrate my passion for building scalable, user-centric solutions.",
     "viewProject": "View Project",
     "projectBadge": "Project",
     "technologies": "Technologies",
