@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, ChevronLeft, ChevronRight, Github, ExternalLink } from "lucide-react"
+import { useTranslations } from "next-intl"
 import { ProjectData } from "./types"
 import { Badge } from "@/components/ui/badge"
 
@@ -13,6 +14,7 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
+    const t = useTranslations('Projects')
     const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
     // Reset image index when modal opens
@@ -64,7 +66,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50"
+                        className="fixed inset-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm z-50"
                     />
 
                     {/* Modal Content */}
@@ -77,13 +79,13 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         {/* Close Button */}
                         <button
                             onClick={onClose}
-                            className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-primary text-white rounded-full transition-colors"
+                            className="absolute top-4 right-4 z-50 p-2 bg-white/80 dark:bg-black/50 hover:bg-primary text-primary dark:text-white hover:text-primary-foreground rounded-full transition-colors shadow-sm"
                         >
                             <X size={20} />
                         </button>
 
                         {/* Image Section (Left/Top) */}
-                        <div className="w-full md:w-2/3 h-[50%] md:h-full relative bg-black/90 flex items-center justify-center overflow-hidden">
+                        <div className="w-full md:w-2/3 h-[50%] md:h-full relative bg-white dark:bg-black flex items-center justify-center overflow-hidden transition-colors duration-300">
                             <AnimatePresence mode="wait">
                                 <motion.img
                                     key={currentImageIndex}
@@ -100,13 +102,13 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                             {/* Navigation Arrows */}
                             <button
                                 onClick={prevImage}
-                                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-primary text-white rounded-full transition-colors backdrop-blur-sm"
+                                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/80 dark:bg-black/50 hover:bg-primary text-primary dark:text-white hover:text-primary-foreground rounded-full transition-colors backdrop-blur-sm shadow-sm"
                             >
                                 <ChevronLeft size={24} />
                             </button>
                             <button
                                 onClick={nextImage}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-primary text-white rounded-full transition-colors backdrop-blur-sm"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/80 dark:bg-black/50 hover:bg-primary text-primary dark:text-white hover:text-primary-foreground rounded-full transition-colors backdrop-blur-sm shadow-sm"
                             >
                                 <ChevronRight size={24} />
                             </button>
@@ -117,7 +119,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                                     <button
                                         key={idx}
                                         onClick={() => setCurrentImageIndex(idx)}
-                                        className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === currentImageIndex ? "bg-primary w-8" : "bg-white/50 hover:bg-white"
+                                        className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === currentImageIndex ? "bg-primary w-8" : "bg-black/20 dark:bg-white/50 hover:bg-black/40 dark:hover:bg-white"
                                             }`}
                                     />
                                 ))}
@@ -137,7 +139,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                             <div className="space-y-6 flex-grow">
                                 <div>
                                     <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3">
-                                        Technologies
+                                        {t('technologies')}
                                     </h3>
                                     <div className="flex flex-wrap gap-2">
                                         {project.tech.map((tech) => (
@@ -150,7 +152,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
                                 <div>
                                     <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3">
-                                        Key Metrics
+                                        {t('keyMetrics')}
                                     </h3>
                                     <div className="p-4 bg-secondary/20 rounded-xl border border-border/50">
                                         <p className="text-foreground font-medium italic">

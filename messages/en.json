@@ -66,6 +66,8 @@
     "title": "Featured Projects",
     "viewProject": "View Project",
     "projectBadge": "Project",
+    "technologies": "Technologies",
+    "keyMetrics": "Key Metrics",
     "items": [
       {
         "title": "VenceJá",
