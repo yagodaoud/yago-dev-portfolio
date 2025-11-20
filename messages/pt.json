@@ -127,7 +127,10 @@
         "name": "Nome",
         "email": "Email",
         "message": "Mensagem",
-        "send": "Enviar Mensagem"
+        "send": "Enviar Mensagem",
+        "loading": "Enviando...",
+        "success": "Mensagem enviada com sucesso!",
+        "error": "Erro ao enviar mensagem. Tente novamente mais tarde."
     },
     "Nav": {
         "about": "Sobre",

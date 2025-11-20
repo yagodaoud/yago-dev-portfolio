@@ -6,10 +6,47 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Send } from "lucide-react"
+import { Mail, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react"
+import { useState } from "react"
 
 export function Contact() {
     const t = useTranslations('Contact')
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+    const [errorMessage, setErrorMessage] = useState('')
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+        setStatus('loading')
+        setErrorMessage('')
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+
+            if (!response.ok) {
+                throw new Error('Failed to send email')
+            }
+
+            setStatus('success')
+            setFormData({ name: '', email: '', message: '' })
+
+            // Reset success message after 5 seconds
+            setTimeout(() => setStatus('idle'), 5000)
+        } catch (error) {
+            setStatus('error')
+            setErrorMessage('Failed to send message. Please try again or email directly.')
+        }
+    }
 
     return (
         <section id="contact" className="py-20">
@@ -38,24 +75,70 @@ export function Contact() {
                                 </a>
                             </div>
 
-                            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                            <form className="space-y-4" onSubmit={handleSubmit}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="space-y-2">
                                         <label htmlFor="name" className="text-sm font-medium">{t('name')}</label>
-                                        <Input id="name" placeholder="John Doe" />
+                                        <Input
+                                            id="name"
+                                            placeholder="John Doe"
+                                            value={formData.name}
+                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                            required
+                                            disabled={status === 'loading'}
+                                        />
                                     </div>
                                     <div className="space-y-2">
                                         <label htmlFor="email" className="text-sm font-medium">{t('email')}</label>
-                                        <Input id="email" type="email" placeholder="john@example.com" />
+                                        <Input
+                                            id="email"
+                                            type="email"
+                                            placeholder="john@example.com"
+                                            value={formData.email}
+                                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                            required
+                                            disabled={status === 'loading'}
+                                        />
                                     </div>
                                 </div>
                                 <div className="space-y-2">
                                     <label htmlFor="message" className="text-sm font-medium">{t('message')}</label>
-                                    <Textarea id="message" placeholder="Hello..." className="min-h-[120px]" />
+                                    <Textarea
+                                        id="message"
+                                        placeholder="Hello..."
+                                        className="min-h-[120px]"
+                                        value={formData.message}
+                                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                        required
+                                        disabled={status === 'loading'}
+                                    />
                                 </div>
-                                <Button type="submit" className="w-full gap-2">
-                                    <Send className="w-4 h-4" />
-                                    {t('send')}
+
+                                {status === 'success' && (
+                                    <div className="flex items-center gap-2 text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-950/30 p-3 rounded-md">
+                                        <CheckCircle2 className="w-5 h-5" />
+                                        <p className="text-sm">{t('success')}</p>
+                                    </div>
+                                )}
+
+                                {status === 'error' && (
+                                    <div className="flex items-center gap-2 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950/30 p-3 rounded-md">
+                                        <AlertCircle className="w-5 h-5" />
+                                        <p className="text-sm">{errorMessage}</p>
+                                    </div>
+                                )}
+
+                                <Button
+                                    type="submit"
+                                    className="w-full gap-2 cursor-pointer"
+                                    disabled={status === 'loading'}
+                                >
+                                    {status === 'loading' ? (
+                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                    ) : (
+                                        <Send className="w-4 h-4" />
+                                    )}
+                                    {status === 'loading' ? t('loading') : t('send')}
                                 </Button>
                             </form>
                         </CardContent>
