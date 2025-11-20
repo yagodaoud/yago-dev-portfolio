@@ -27,7 +27,7 @@
   --ring: #18181b;
 
   /* Custom Gradients */
-  --spotlight: rgba(0, 0, 0, 0.05);
+  --spotlight: rgba(100, 100, 100, 0.12);
   --gradient-start: #3b82f6;
   --gradient-end: #8b5cf6;
 }

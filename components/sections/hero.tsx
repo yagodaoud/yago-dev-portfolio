@@ -28,10 +28,6 @@ export function Hero() {
 
     return (
         <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-            {/* Decorative Code Snippet Background */}
-            <div className="absolute top-1/4 right-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none font-mono text-6xl font-bold rotate-12 transform translate-x-1/3">
-                {'<Code />'}
-            </div>
 
             <div className="container mx-auto px-4 flex flex-col items-center text-center gap-8 z-10">
 
