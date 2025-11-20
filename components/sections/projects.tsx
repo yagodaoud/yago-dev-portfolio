@@ -44,7 +44,7 @@ export function Projects() {
                     </h2>
                     <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-purple-500 rounded-full" />
                     <p className="text-muted-foreground max-w-2xl text-lg">
-                        A selection of projects that demonstrate my passion for building scalable, user-centric solutions.
+                        {t('description')}
                     </p>
                 </div>
 

@@ -64,6 +64,7 @@
   },
   "Projects": {
     "title": "Featured Projects",
+    "description": "A selection of projects that demonstrate my passion for building scalable, user-centric solutions.",
     "viewProject": "View Project",
     "projectBadge": "Project",
     "technologies": "Technologies",
