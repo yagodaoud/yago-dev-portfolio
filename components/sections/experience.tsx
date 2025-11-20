@@ -44,7 +44,7 @@ export function Experience() {
                                     </div>
                                 </CardHeader>
                                 <CardContent className="space-y-4">
-                                    {job.description && job.description.length > 0 && (
+                                    {Array.isArray(job.description) && job.description.length > 0 && (
                                         <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
                                             {job.description.map((desc: string, i: number) => (
                                                 <li key={i}>{desc}</li>
@@ -52,7 +52,7 @@ export function Experience() {
                                         </ul>
                                     )}
                                     <div className="flex flex-wrap gap-2">
-                                        {job.tech.map((tech: string) => (
+                                        {Array.isArray(job.tech) && job.tech.map((tech: string) => (
                                             <Badge key={tech} variant="secondary" className="text-xs">
                                                 {tech}
                                             </Badge>

@@ -5,20 +5,22 @@ import { motion } from "framer-motion"
 import { Layers } from "lucide-react"
 import { ProjectCard } from "@/components/projects/project-card"
 import { ProjectData } from "@/components/projects/types"
-import { MOCK_IMAGES, DEFAULT_IMAGES } from "@/components/projects/mock-data"
+import { IMAGES, DEFAULT_IMAGES } from "@/components/projects/image-paths"
 
 export function Projects() {
     const t = useTranslations('Projects')
     const rawProjects = t.raw('items') as any[]
 
     // Map raw data to ProjectData interface
-    const projects: ProjectData[] = rawProjects.map((p) => ({
+    const projects: ProjectData[] = Array.isArray(rawProjects) ? rawProjects.map((p) => ({
         title: p.title,
         description: p.description,
         tech: p.tech,
         metrics: p.metrics,
-        images: MOCK_IMAGES[p.title] || DEFAULT_IMAGES
-    }))
+        images: IMAGES[p.title] || DEFAULT_IMAGES,
+        repoUrl: p.repoUrl,
+        demoUrl: p.demoUrl
+    })) : []
 
     return (
         <section id="projects" className="py-32 relative overflow-hidden">

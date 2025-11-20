@@ -65,6 +65,7 @@
   "Projects": {
     "title": "Featured Projects",
     "viewProject": "View Project",
+    "projectBadge": "Project",
     "items": [
       {
         "title": "VenceJá",
@@ -72,7 +73,8 @@
         "tech": [
           "React",
           "React Native",
-          "Java Spring Boot",
+          "Java",
+          "Spring Boot",
           "PostgreSQL",
           "Firebase"
         ],
@@ -86,16 +88,17 @@
           "Convex",
           "Clerk"
         ],
-        "metrics": "Order management, inventory, real-time reports"
+        "metrics": "Order and tab management, inventory, real-time reports"
       },
       {
         "title": "Paola Gonçalves Rotisserie",
         "description": "Complete financial system.",
         "tech": [
           "React",
-          "Supabase"
+          "Supabase",
+          "Tailwind CSS"
         ],
-        "metrics": "Accounts payable/receivable, customer management"
+        "metrics": "Accounts payable/receivable, customer management, detailed reports"
       },
       {
         "title": "Fulfillment System + Mercado Livre",

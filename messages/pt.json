@@ -65,6 +65,7 @@
     "Projects": {
         "title": "Projetos em Destaque",
         "viewProject": "Ver Projeto",
+        "projectBadge": "Projeto",
         "items": [
             {
                 "title": "VenceJá",
@@ -72,7 +73,8 @@
                 "tech": [
                     "React",
                     "React Native",
-                    "Java Spring Boot",
+                    "Java",
+                    "Spring Boot",
                     "PostgreSQL",
                     "Firebase"
                 ],
@@ -93,9 +95,10 @@
                 "description": "Sistema financeiro completo.",
                 "tech": [
                     "React",
-                    "Supabase"
+                    "Supabase",
+                    "Tailwind CSS"
                 ],
-                "metrics": "Contas a pagar/receber, gestão de clientes e produtos"
+                "metrics": "Contas a pagar/receber, gestão de clientes e produtos, relatórios detalhados"
             },
             {
                 "title": "Sistema de Fulfillment + Mercado Livre",
