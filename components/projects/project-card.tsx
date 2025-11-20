@@ -4,7 +4,7 @@ import { useState, MouseEvent } from "react"
 import { motion, AnimatePresence, useMotionValue } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Folder, ExternalLink, ChevronLeft, ChevronRight, Code2, BarChart3 } from "lucide-react"
+import { Folder, ExternalLink, ChevronLeft, ChevronRight, Code2, BarChart3, Github } from "lucide-react"
 import { ProjectData } from "./types"
 import { Spotlight } from "./spotlight"
 import { ProjectModal } from "./project-modal"
@@ -116,39 +116,32 @@ export function ProjectCard({ project, index }: { project: ProjectData; index: n
                     {/* Bottom 40% - Content */}
                     <div className="flex flex-col flex-grow p-6">
                         <CardHeader className="p-0 mb-4">
-                            <div className="flex justify-between items-start mb-2">
-                                <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 mb-2">
+                            {/* Top row: Project badge (left) and GitHub icon (right) */}
+                            <div className="flex justify-between items-center mb-3">
+                                <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
                                     <Folder size={12} className="mr-1" />
                                     {t('projectBadge')}
                                 </Badge>
-                                <div className="flex gap-2">
-                                    {project.repoUrl && (
-                                        <a
-                                            href={project.repoUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-muted-foreground hover:text-primary transition-colors z-20"
-                                            onClick={(e) => e.stopPropagation()}
-                                        >
-                                            <Code2 size={20} />
-                                        </a>
-                                    )}
-                                    {project.repoUrl && (
-                                        <a
-                                            href={project.repoUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-muted-foreground hover:text-primary transition-colors cursor-pointer z-20"
-                                            onClick={(e) => e.stopPropagation()}
-                                        >
-                                            <ExternalLink size={20} />
-                                        </a>
-                                    )}
-                                </div>
+                                {project.repoUrl && (
+                                    <a
+                                        href={project.repoUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-muted-foreground hover:text-primary transition-colors z-20"
+                                        onClick={(e) => e.stopPropagation()}
+                                        aria-label="View GitHub repository"
+                                    >
+                                        <Github size={20} />
+                                    </a>
+                                )}
                             </div>
-                            <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors duration-300">
-                                {project.title}
-                            </CardTitle>
+
+                            {/* Title row */}
+                            <div className="flex justify-between items-start mb-2">
+                                <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors duration-300">
+                                    {project.title}
+                                </CardTitle>
+                            </div>
                             <CardDescription className="line-clamp-2 mt-2 text-base">
                                 {project.description}
                             </CardDescription>

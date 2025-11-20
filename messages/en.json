@@ -73,6 +73,7 @@
       {
         "title": "VenceJá",
         "description": "Complete boleto management system with OCR.",
+        "repoUrl": "https://github.com/yagodaoud/venceja-web",
         "tech": [
           "React",
           "React Native",
@@ -86,6 +87,7 @@
       },
       {
         "title": "Comandaê",
+        "repoUrl": "https://github.com/yagodaoud/comandae-mobile",
         "description": "Mobile app for restaurants.",
         "tech": [
           "React Native",
@@ -96,6 +98,7 @@
       },
       {
         "title": "Paola Gonçalves Rotisserie",
+        "repoUrl": "https://github.com/yagodaoud/paola-rotisserie",
         "description": "Complete financial system.",
         "tech": [
           "React",
@@ -105,15 +108,17 @@
         "metrics": "Accounts payable/receivable, customer management, detailed reports"
       },
       {
-        "title": "Fulfillment System + Mercado Livre",
-        "description": "Internal proxy and order webhook.",
+        "title": "VoxChain",
+        "repoUrl": "https://github.com/yagodaoud/voxchain",
+        "description": "Voting system in Blockchain.",
         "tech": [
-          "Node.js",
-          "Nest.js",
-          "RabbitMQ",
-          "MySQL"
+          "Java",
+          "Blockchain",
+          "Distributed Systems",
+          "React",
+          "Tailwind CSS"
         ],
-        "metrics": "Eliminated 100% of manual queries"
+        "metrics": "Voting system in Blockchain, with transparent and auditable votes"
       }
     ]
   },

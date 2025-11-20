@@ -20,10 +20,13 @@ export const IMAGES: Record<string, string[]> = {
         "/projects/paola-rotisserie/4.png",
         "/projects/paola-rotisserie/5.png"
     ],
-    "Fulfillment System + Mercado Livre": [
-        "/projects/fulfillment/1.png",
-        "/projects/fulfillment/2.png",
-        "/projects/fulfillment/3.png"
+    "VoxChain": [
+        "/projects/voxchain/1.png",
+        "/projects/voxchain/2.png",
+        "/projects/voxchain/3.png",
+        "/projects/voxchain/4.png",
+        "/projects/voxchain/5.png",
+        "/projects/voxchain/6.png",
     ]
 }
 
