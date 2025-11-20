@@ -57,7 +57,7 @@ export function ProjectCard({ project, index }: { project: ProjectData; index: n
                 <Card className="h-full flex flex-col overflow-hidden bg-card/40 backdrop-blur-md border-border/50 relative z-10 transition-colors duration-500 group-hover:border-primary/30">
 
                     {/* Top 60% - Image Carousel */}
-                    <div className={`relative h-64 md:h-72 w-full overflow-hidden ${isComandae ? 'bg-black/90' : 'bg-black/20'}`}>
+                    <div className="relative h-64 md:h-72 w-full overflow-hidden bg-white dark:bg-black transition-colors duration-300">
                         <AnimatePresence mode="wait">
                             <motion.img
                                 key={currentImageIndex}
@@ -81,14 +81,14 @@ export function ProjectCard({ project, index }: { project: ProjectData; index: n
                         <div className="absolute inset-0 flex items-center justify-between p-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                             <button
                                 onClick={prevImage}
-                                className="p-2 rounded-full bg-black/50 text-white hover:bg-primary/80 transition-colors backdrop-blur-sm"
+                                className="p-2 rounded-full bg-black/50 text-white hover:bg-primary/80 transition-colors backdrop-blur-sm cursor-pointer"
                                 aria-label="Previous image"
                             >
                                 <ChevronLeft size={20} />
                             </button>
                             <button
                                 onClick={nextImage}
-                                className="p-2 rounded-full bg-black/50 text-white hover:bg-primary/80 transition-colors backdrop-blur-sm"
+                                className="p-2 rounded-full bg-black/50 text-white hover:bg-primary/80 transition-colors backdrop-blur-sm cursor-pointer"
                                 aria-label="Next image"
                             >
                                 <ChevronRight size={20} />

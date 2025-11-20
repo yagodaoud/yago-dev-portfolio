@@ -102,13 +102,13 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                             {/* Navigation Arrows */}
                             <button
                                 onClick={prevImage}
-                                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/80 dark:bg-black/50 hover:bg-primary text-primary dark:text-white hover:text-primary-foreground rounded-full transition-colors backdrop-blur-sm shadow-sm"
+                                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/80 dark:bg-black/50 hover:bg-primary text-primary dark:text-white hover:text-primary-foreground rounded-full transition-colors backdrop-blur-sm shadow-sm cursor-pointer"
                             >
                                 <ChevronLeft size={24} />
                             </button>
                             <button
                                 onClick={nextImage}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/80 dark:bg-black/50 hover:bg-primary text-primary dark:text-white hover:text-primary-foreground rounded-full transition-colors backdrop-blur-sm shadow-sm"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/80 dark:bg-black/50 hover:bg-primary text-primary dark:text-white hover:text-primary-foreground rounded-full transition-colors backdrop-blur-sm shadow-sm cursor-pointer"
                             >
                                 <ChevronRight size={24} />
                             </button>
@@ -143,7 +143,11 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                                     </h3>
                                     <div className="flex flex-wrap gap-2">
                                         {project.tech.map((tech) => (
-                                            <Badge key={tech} variant="secondary" className="px-3 py-1">
+                                            <Badge
+                                                key={tech}
+                                                variant="secondary"
+                                                className="px-3 py-1 bg-secondary/50 hover:bg-primary/20 transition-colors border border-transparent hover:border-primary/30 cursor-pointer"
+                                            >
                                                 {tech}
                                             </Badge>
                                         ))}
